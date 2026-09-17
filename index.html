@@ -1,385 +1,385 @@
 <!doctype html>
 <html lang="ko">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>정희주 도감 🐟</title>
-<meta name="description" content="가보자가보자 — 밥 묵자 묵어어어. 정희주를 기록하기 위해 존재하는 레포의, 반짝반짝 뿌슝빠슝 페이지.">
-<meta property="og:title" content="정희주 도감 🐟">
-<meta property="og:description" content="일지, 상납 시스템, 블레스유 프로토콜, 그리고 희주력(力) 20선.">
-<meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐟</text></svg>">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jua&family=Gaegu:wght@400;700&family=Gowun+Dodum&family=Noto+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<style>
-/* ══════════════════════════════════════════════════════
-   뿌슝빠슝 파스텔 — 정희주 도감 전용 팔레트
-   ══════════════════════════════════════════════════════ */
-:root{
-  --plum:#4B3A57;
-  --plum-2:#705C7C;
-  --plum-3:#9D8BA9;
-  --pink:#FF8FB1;
-  --pink-deep:#F2649A;
-  --pink-soft:#FFDDEA;
-  --peach:#FFB5A7;
-  --lav:#C1AEF7;
-  --lav-soft:#E8E0FF;
-  --mint:#89E2C6;
-  --sky:#A6D4FF;
-  --butter:#FFE08A;
-  --cream:#FFF8F4;
-  --card:rgba(255,255,255,.72);
-  --line:rgba(120,90,130,.16);
-  --shadow:0 22px 48px -24px rgba(190,110,155,.55);
-  --shadow-sm:0 10px 24px -14px rgba(190,110,155,.5);
-  --round:28px;
-  --display:"Jua","Noto Sans KR",sans-serif;
-  --hand:"Gaegu","Jua",cursive;
-  --body:"Gowun Dodum","Noto Sans KR",system-ui,sans-serif;
-  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
-}
-*,*::before,*::after{box-sizing:border-box}
-[hidden]{display:none !important}
-html{color-scheme:light;scroll-behavior:smooth}
-body{
-  margin:0;
-  font-family:var(--body);
-  font-size:16.5px;
-  line-height:1.8;
-  color:var(--plum);
-  background:var(--cream);
-  overflow-x:hidden;
-  -webkit-font-smoothing:antialiased;
-}
-img{max-width:100%}
-a{color:var(--pink-deep);text-underline-offset:4px;text-decoration-thickness:2px}
-button{font-family:inherit}
-:focus-visible{outline:3px solid var(--lav);outline-offset:3px;border-radius:8px}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>정희주 도감 🐟</title>
+  <meta name="description" content="가보자가보자 — 밥 묵자 묵어어어. 정희주를 기록하기 위해 존재하는 레포의, 반짝반짝 뿌슝빠슝 페이지.">
+  <meta property="og:title" content="정희주 도감 🐟">
+  <meta property="og:description" content="일지, 상납 시스템, 블레스유 프로토콜, 그리고 희주력(力) 20선.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐟</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jua&family=Gaegu:wght@400;700&family=Gowun+Dodum&family=Noto+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <style>
+    /* ══════════════════════════════════════════════════════
+       뿌슝빠슝 파스텔 — 정희주 도감 전용 팔레트
+       ══════════════════════════════════════════════════════ */
+    :root{
+      --plum:#4B3A57;
+      --plum-2:#705C7C;
+      --plum-3:#9D8BA9;
+      --pink:#FF8FB1;
+      --pink-deep:#F2649A;
+      --pink-soft:#FFDDEA;
+      --peach:#FFB5A7;
+      --lav:#C1AEF7;
+      --lav-soft:#E8E0FF;
+      --mint:#89E2C6;
+      --sky:#A6D4FF;
+      --butter:#FFE08A;
+      --cream:#FFF8F4;
+      --card:rgba(255,255,255,.72);
+      --line:rgba(120,90,130,.16);
+      --shadow:0 22px 48px -24px rgba(190,110,155,.55);
+      --shadow-sm:0 10px 24px -14px rgba(190,110,155,.5);
+      --round:28px;
+      --display:"Jua","Noto Sans KR",sans-serif;
+      --hand:"Gaegu","Jua",cursive;
+      --body:"Gowun Dodum","Noto Sans KR",system-ui,sans-serif;
+      --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    [hidden]{display:none !important}
+    html{color-scheme:light;scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:var(--body);
+      font-size:16.5px;
+      line-height:1.8;
+      color:var(--plum);
+      background:var(--cream);
+      overflow-x:hidden;
+      -webkit-font-smoothing:antialiased;
+    }
+    img{max-width:100%}
+    a{color:var(--pink-deep);text-underline-offset:4px;text-decoration-thickness:2px}
+    button{font-family:inherit}
+    :focus-visible{outline:3px solid var(--lav);outline-offset:3px;border-radius:8px}
 
-/* ── 배경: 흐물흐물 떠다니는 파스텔 덩어리 ───────────── */
-.blobs{position:fixed;inset:0;z-index:-2;overflow:hidden;pointer-events:none}
-.blobs i{
-  position:absolute;display:block;border-radius:50%;
-  filter:blur(60px);opacity:.55;
-  animation:drift 22s ease-in-out infinite alternate;
-}
-.blobs i:nth-child(1){width:46vw;height:46vw;left:-10vw;top:-8vw;background:var(--pink-soft)}
-.blobs i:nth-child(2){width:38vw;height:38vw;right:-8vw;top:18vh;background:var(--lav-soft);animation-duration:27s}
-.blobs i:nth-child(3){width:42vw;height:42vw;left:12vw;bottom:-14vw;background:#D8F5E9;animation-duration:31s}
-.blobs i:nth-child(4){width:30vw;height:30vw;right:6vw;bottom:6vh;background:#FFF0C9;animation-duration:19s}
-@keyframes drift{
-  from{transform:translate3d(0,0,0) scale(1)}
-  to{transform:translate3d(4vw,-5vh,0) scale(1.16)}
-}
-.grain{
-  position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.5;
-  background:radial-gradient(circle at 20% 20%,rgba(255,255,255,.7),transparent 55%),
-             radial-gradient(circle at 80% 70%,rgba(255,255,255,.55),transparent 50%);
-}
+    /* ── 배경: 흐물흐물 떠다니는 파스텔 덩어리 ───────────── */
+    .blobs{position:fixed;inset:0;z-index:-2;overflow:hidden;pointer-events:none}
+    .blobs i{
+      position:absolute;display:block;border-radius:50%;
+      filter:blur(60px);opacity:.55;
+      animation:drift 22s ease-in-out infinite alternate;
+    }
+    .blobs i:nth-child(1){width:46vw;height:46vw;left:-10vw;top:-8vw;background:var(--pink-soft)}
+    .blobs i:nth-child(2){width:38vw;height:38vw;right:-8vw;top:18vh;background:var(--lav-soft);animation-duration:27s}
+    .blobs i:nth-child(3){width:42vw;height:42vw;left:12vw;bottom:-14vw;background:#D8F5E9;animation-duration:31s}
+    .blobs i:nth-child(4){width:30vw;height:30vw;right:6vw;bottom:6vh;background:#FFF0C9;animation-duration:19s}
+    @keyframes drift{
+      from{transform:translate3d(0,0,0) scale(1)}
+      to{transform:translate3d(4vw,-5vh,0) scale(1.16)}
+    }
+    .grain{
+      position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.5;
+      background:radial-gradient(circle at 20% 20%,rgba(255,255,255,.7),transparent 55%),
+                 radial-gradient(circle at 80% 70%,rgba(255,255,255,.55),transparent 50%);
+    }
 
-/* ── 상단 진행바 (헤엄치는 물고기) ───────────────────── */
-.progress{position:fixed;left:0;top:0;width:100%;height:6px;z-index:60;background:rgba(255,255,255,.4)}
-.progress-fill{height:100%;width:0;background:linear-gradient(90deg,var(--pink),var(--lav),var(--mint));transition:width .12s linear}
-.progress-fish{
-  position:fixed;top:-6px;left:0;z-index:61;font-size:22px;
-  transform:translateX(-50%) scaleX(-1);transition:left .12s linear;pointer-events:none;
-}
+    /* ── 상단 진행바 (헤엄치는 물고기) ───────────────────── */
+    .progress{position:fixed;left:0;top:0;width:100%;height:6px;z-index:60;background:rgba(255,255,255,.4)}
+    .progress-fill{height:100%;width:0;background:linear-gradient(90deg,var(--pink),var(--lav),var(--mint));transition:width .12s linear}
+    .progress-fish{
+      position:fixed;top:-6px;left:0;z-index:61;font-size:22px;
+      transform:translateX(-50%) scaleX(-1);transition:left .12s linear;pointer-events:none;
+    }
 
-.wrap{width:min(1060px,100%);margin-inline:auto;padding-inline:clamp(18px,5vw,40px)}
+    .wrap{width:min(1060px,100%);margin-inline:auto;padding-inline:clamp(18px,5vw,40px)}
 
-/* ── 표지 ────────────────────────────────────────────── */
-.hero{padding-block:clamp(70px,12vw,120px) clamp(30px,6vw,56px);text-align:center;position:relative}
-.hero-badge{
-  display:inline-block;font-family:var(--mono);font-size:12px;letter-spacing:.22em;
-  padding:8px 18px;border-radius:999px;background:var(--white,#fff);color:var(--pink-deep);
-  border:2px dashed var(--pink);box-shadow:var(--shadow-sm);transform:rotate(-2deg);
-}
-h1{
-  font-family:var(--display);
-  font-size:clamp(50px,13vw,110px);
-  line-height:1.02;margin:22px 0 10px;letter-spacing:-.01em;
-  color:var(--plum);
-}
-/* 글자마다 따로 통통 튀므로 그라데이션 대신 글자별 색을 준다
-   (자식에 transform이 걸리면 부모의 background-clip:text가 깨진다) */
-h1 .wob{
-  display:inline-block;
-  animation:wob 2.6s ease-in-out infinite;
-  text-shadow:0 10px 20px rgba(255,143,177,.38);
-  transition:transform .2s cubic-bezier(.2,1.6,.4,1);
-}
-h1 .wob:nth-child(1){color:#F2649A}
-h1 .wob:nth-child(2){color:#B07BEE;animation-delay:.14s}
-h1 .wob:nth-child(3){color:#57AEF0;animation-delay:.28s}
-h1 .wob:nth-child(4){color:#3FC3A3;animation-delay:.42s}
-h1 .wob:nth-child(5){color:#FF9E6B;animation-delay:.56s}
-h1:hover .wob{transform:translateY(-16px) rotate(6deg) scale(1.08)}
-@keyframes wob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-10px) rotate(-3deg)}}
-.hero-sub{font-family:var(--hand);font-size:clamp(24px,4.6vw,38px);color:var(--plum-2);margin:0 0 6px}
-.typer{min-height:2.2em;font-family:var(--display);font-size:clamp(17px,2.6vw,23px);color:var(--pink-deep);margin:0 0 26px}
-.typer::after{content:"|";animation:blink 1s steps(1) infinite;color:var(--lav)}
-@keyframes blink{50%{opacity:0}}
-.hero-fish{
-  font-size:clamp(56px,14vw,104px);display:inline-block;cursor:pointer;user-select:none;
-  animation:swim 3.4s ease-in-out infinite;filter:drop-shadow(0 12px 16px rgba(160,120,180,.3));
-  background:none;border:0;padding:0;
-}
-@keyframes swim{0%,100%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-16px) rotate(8deg)}}
-.hero-fish:active{transform:scale(.88)}
-.fish-hint{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;color:var(--plum-3);margin:4px 0 0}
+    /* ── 표지 ────────────────────────────────────────────── */
+    .hero{padding-block:clamp(70px,12vw,120px) clamp(30px,6vw,56px);text-align:center;position:relative}
+    .hero-badge{
+      display:inline-block;font-family:var(--mono);font-size:12px;letter-spacing:.22em;
+      padding:8px 18px;border-radius:999px;background:var(--white,#fff);color:var(--pink-deep);
+      border:2px dashed var(--pink);box-shadow:var(--shadow-sm);transform:rotate(-2deg);
+    }
+    h1{
+      font-family:var(--display);
+      font-size:clamp(50px,13vw,110px);
+      line-height:1.02;margin:22px 0 10px;letter-spacing:-.01em;
+      color:var(--plum);
+    }
+    /* 글자마다 따로 통통 튀므로 그라데이션 대신 글자별 색을 준다
+       (자식에 transform이 걸리면 부모의 background-clip:text가 깨진다) */
+    h1 .wob{
+      display:inline-block;
+      animation:wob 2.6s ease-in-out infinite;
+      text-shadow:0 10px 20px rgba(255,143,177,.38);
+      transition:transform .2s cubic-bezier(.2,1.6,.4,1);
+    }
+    h1 .wob:nth-child(1){color:#F2649A}
+    h1 .wob:nth-child(2){color:#B07BEE;animation-delay:.14s}
+    h1 .wob:nth-child(3){color:#57AEF0;animation-delay:.28s}
+    h1 .wob:nth-child(4){color:#3FC3A3;animation-delay:.42s}
+    h1 .wob:nth-child(5){color:#FF9E6B;animation-delay:.56s}
+    h1:hover .wob{transform:translateY(-16px) rotate(6deg) scale(1.08)}
+    @keyframes wob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-10px) rotate(-3deg)}}
+    .hero-sub{font-family:var(--hand);font-size:clamp(24px,4.6vw,38px);color:var(--plum-2);margin:0 0 6px}
+    .typer{min-height:2.2em;font-family:var(--display);font-size:clamp(17px,2.6vw,23px);color:var(--pink-deep);margin:0 0 26px}
+    .typer::after{content:"|";animation:blink 1s steps(1) infinite;color:var(--lav)}
+    @keyframes blink{50%{opacity:0}}
+    .hero-fish{
+      font-size:clamp(56px,14vw,104px);display:inline-block;cursor:pointer;user-select:none;
+      animation:swim 3.4s ease-in-out infinite;filter:drop-shadow(0 12px 16px rgba(160,120,180,.3));
+      background:none;border:0;padding:0;
+    }
+    @keyframes swim{0%,100%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-16px) rotate(8deg)}}
+    .hero-fish:active{transform:scale(.88)}
+    .fish-hint{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;color:var(--plum-3);margin:4px 0 0}
 
-.quick{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:30px 0 0}
-.quick a{
-  text-decoration:none;font-family:var(--display);font-size:14.5px;color:var(--plum);
-  background:#fff;border:2px solid transparent;padding:9px 16px;border-radius:999px;
-  box-shadow:var(--shadow-sm);transition:transform .2s cubic-bezier(.2,1.4,.4,1),border-color .2s;
-}
-.quick a:hover{transform:translateY(-4px) rotate(-2deg);border-color:var(--pink)}
+    .quick{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:30px 0 0}
+    .quick a{
+      text-decoration:none;font-family:var(--display);font-size:14.5px;color:var(--plum);
+      background:#fff;border:2px solid transparent;padding:9px 16px;border-radius:999px;
+      box-shadow:var(--shadow-sm);transition:transform .2s cubic-bezier(.2,1.4,.4,1),border-color .2s;
+    }
+    .quick a:hover{transform:translateY(-4px) rotate(-2deg);border-color:var(--pink)}
 
-/* ── 섹션 공통 ───────────────────────────────────────── */
-.sec{padding-block:clamp(44px,8vw,86px)}
-.eyebrow{
-  display:inline-flex;align-items:center;gap:8px;margin:0 0 8px;
-  font-family:var(--mono);font-size:11.5px;letter-spacing:.24em;color:var(--pink-deep);
-  background:#fff;padding:6px 14px;border-radius:999px;box-shadow:var(--shadow-sm);
-}
-h2{
-  font-family:var(--display);font-size:clamp(28px,5.4vw,46px);line-height:1.25;
-  margin:0 0 10px;text-wrap:balance;
-}
-.sec-lead{color:var(--plum-2);margin:0 0 26px;max-width:36em}
+    /* ── 섹션 공통 ───────────────────────────────────────── */
+    .sec{padding-block:clamp(44px,8vw,86px)}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:8px;margin:0 0 8px;
+      font-family:var(--mono);font-size:11.5px;letter-spacing:.24em;color:var(--pink-deep);
+      background:#fff;padding:6px 14px;border-radius:999px;box-shadow:var(--shadow-sm);
+    }
+    h2{
+      font-family:var(--display);font-size:clamp(28px,5.4vw,46px);line-height:1.25;
+      margin:0 0 10px;text-wrap:balance;
+    }
+    .sec-lead{color:var(--plum-2);margin:0 0 26px;max-width:36em}
 
-.card{
-  background:var(--card);
-  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
-  border:1.5px solid rgba(255,255,255,.9);
-  border-radius:var(--round);
-  box-shadow:var(--shadow);
-  padding:clamp(22px,4vw,34px);
-}
-.btn{
-  border:0;cursor:pointer;font-family:var(--display);font-size:16px;color:#fff;
-  padding:13px 26px;border-radius:999px;position:relative;overflow:hidden;
-  background:linear-gradient(120deg,var(--pink),var(--lav));
-  box-shadow:0 12px 24px -12px rgba(242,100,154,.9);
-  transition:transform .18s cubic-bezier(.2,1.5,.4,1),filter .18s;
-}
-.btn:hover{transform:translateY(-3px) scale(1.03);filter:saturate(1.15)}
-.btn:active{transform:translateY(1px) scale(.97)}
-.btn::after{
-  content:"";position:absolute;inset:0;transform:translateX(-120%);
-  background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.55) 50%,transparent 60%);
-}
-.btn:hover::after{animation:shine .8s ease}
-@keyframes shine{to{transform:translateX(120%)}}
-.btn.ghost{background:#fff;color:var(--pink-deep);box-shadow:var(--shadow-sm);border:2px solid var(--pink-soft)}
-.btn[disabled]{opacity:.55;cursor:not-allowed;transform:none}
-.mini{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;color:var(--plum-3)}
+    .card{
+      background:var(--card);
+      backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+      border:1.5px solid rgba(255,255,255,.9);
+      border-radius:var(--round);
+      box-shadow:var(--shadow);
+      padding:clamp(22px,4vw,34px);
+    }
+    .btn{
+      border:0;cursor:pointer;font-family:var(--display);font-size:16px;color:#fff;
+      padding:13px 26px;border-radius:999px;position:relative;overflow:hidden;
+      background:linear-gradient(120deg,var(--pink),var(--lav));
+      box-shadow:0 12px 24px -12px rgba(242,100,154,.9);
+      transition:transform .18s cubic-bezier(.2,1.5,.4,1),filter .18s;
+    }
+    .btn:hover{transform:translateY(-3px) scale(1.03);filter:saturate(1.15)}
+    .btn:active{transform:translateY(1px) scale(.97)}
+    .btn::after{
+      content:"";position:absolute;inset:0;transform:translateX(-120%);
+      background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.55) 50%,transparent 60%);
+    }
+    .btn:hover::after{animation:shine .8s ease}
+    @keyframes shine{to{transform:translateX(120%)}}
+    .btn.ghost{background:#fff;color:var(--pink-deep);box-shadow:var(--shadow-sm);border:2px solid var(--pink-soft)}
+    .btn[disabled]{opacity:.55;cursor:not-allowed;transform:none}
+    .mini{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;color:var(--plum-3)}
 
-/* 스크롤 등장 */
-.reveal{opacity:0;transform:translateY(28px) scale(.98);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.9,.3,1)}
-.reveal.on{opacity:1;transform:none}
+    /* 스크롤 등장 */
+    .reveal{opacity:0;transform:translateY(28px) scale(.98);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.9,.3,1)}
+    .reveal.on{opacity:1;transform:none}
 
-/* ── 희주력 뽑기 ─────────────────────────────────────── */
-.fact-wrap{display:grid;gap:18px;justify-items:center;text-align:center}
-.fact-card{
-  width:100%;min-height:200px;display:grid;place-content:center;gap:12px;
-  padding:clamp(26px,5vw,44px);border-radius:var(--round);
-  background:linear-gradient(140deg,#fff,var(--pink-soft));
-  border:2px dashed var(--pink);box-shadow:var(--shadow);
-}
-.fact-no{font-family:var(--mono);font-size:12px;letter-spacing:.2em;color:var(--pink-deep)}
-.fact-text{font-family:var(--hand);font-size:clamp(26px,5.4vw,42px);line-height:1.45;margin:0;color:var(--plum);text-wrap:balance}
-.fact-card.roll .fact-text{animation:rollin .38s ease}
-@keyframes rollin{from{opacity:0;transform:translateY(18px) rotate(2deg)}to{opacity:1;transform:none}}
-.fact-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+    /* ── 희주력 뽑기 ─────────────────────────────────────── */
+    .fact-wrap{display:grid;gap:18px;justify-items:center;text-align:center}
+    .fact-card{
+      width:100%;min-height:200px;display:grid;place-content:center;gap:12px;
+      padding:clamp(26px,5vw,44px);border-radius:var(--round);
+      background:linear-gradient(140deg,#fff,var(--pink-soft));
+      border:2px dashed var(--pink);box-shadow:var(--shadow);
+    }
+    .fact-no{font-family:var(--mono);font-size:12px;letter-spacing:.2em;color:var(--pink-deep)}
+    .fact-text{font-family:var(--hand);font-size:clamp(26px,5.4vw,42px);line-height:1.45;margin:0;color:var(--plum);text-wrap:balance}
+    .fact-card.roll .fact-text{animation:rollin .38s ease}
+    @keyframes rollin{from{opacity:0;transform:translateY(18px) rotate(2deg)}to{opacity:1;transform:none}}
+    .fact-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
 
-/* ── 밥 묵자 룰렛 ────────────────────────────────────── */
-.roulette{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:clamp(22px,5vw,44px);align-items:center}
-@media (max-width:760px){.roulette{grid-template-columns:1fr;justify-items:center;text-align:center}}
-.wheel-box{position:relative;width:min(320px,80vw);aspect-ratio:1}
-.wheel{
-  width:100%;height:100%;border-radius:50%;position:relative;
-  border:10px solid #fff;box-shadow:var(--shadow),inset 0 0 0 3px rgba(255,255,255,.6);
-  transition:transform 4.4s cubic-bezier(.12,.86,.16,1);
-}
-.wheel-label{
-  position:absolute;inset:0;display:flex;justify-content:center;padding-top:16px;
-  font-family:var(--display);font-size:13px;color:#5B4467;
-}
-.wheel-label span{max-width:8ch;text-align:center;line-height:1.15;text-shadow:0 1px 0 rgba(255,255,255,.7)}
-.wheel-pin{
-  position:absolute;left:50%;top:-12px;transform:translateX(-50%);font-size:30px;z-index:3;
-  filter:drop-shadow(0 4px 6px rgba(0,0,0,.18));
-}
-.wheel-hub{
-  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
-  width:62px;height:62px;border-radius:50%;background:#fff;display:grid;place-items:center;
-  font-size:26px;box-shadow:var(--shadow-sm);z-index:2;
-}
-.roul-result{font-family:var(--hand);font-size:clamp(30px,6vw,52px);margin:6px 0;min-height:1.3em;color:var(--pink-deep)}
-.roul-say{font-size:16px;color:var(--plum-2);min-height:3em;margin:0 0 16px}
+    /* ── 밥 묵자 룰렛 ────────────────────────────────────── */
+    .roulette{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:clamp(22px,5vw,44px);align-items:center}
+    @media (max-width:760px){.roulette{grid-template-columns:1fr;justify-items:center;text-align:center}}
+    .wheel-box{position:relative;width:min(320px,80vw);aspect-ratio:1}
+    .wheel{
+      width:100%;height:100%;border-radius:50%;position:relative;
+      border:10px solid #fff;box-shadow:var(--shadow),inset 0 0 0 3px rgba(255,255,255,.6);
+      transition:transform 4.4s cubic-bezier(.12,.86,.16,1);
+    }
+    .wheel-label{
+      position:absolute;inset:0;display:flex;justify-content:center;padding-top:16px;
+      font-family:var(--display);font-size:13px;color:#5B4467;
+    }
+    .wheel-label span{max-width:8ch;text-align:center;line-height:1.15;text-shadow:0 1px 0 rgba(255,255,255,.7)}
+    .wheel-pin{
+      position:absolute;left:50%;top:-12px;transform:translateX(-50%);font-size:30px;z-index:3;
+      filter:drop-shadow(0 4px 6px rgba(0,0,0,.18));
+    }
+    .wheel-hub{
+      position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+      width:62px;height:62px;border-radius:50%;background:#fff;display:grid;place-items:center;
+      font-size:26px;box-shadow:var(--shadow-sm);z-index:2;
+    }
+    .roul-result{font-family:var(--hand);font-size:clamp(30px,6vw,52px);margin:6px 0;min-height:1.3em;color:var(--pink-deep)}
+    .roul-say{font-size:16px;color:var(--plum-2);min-height:3em;margin:0 0 16px}
 
-/* ── 블레스유 프로토콜 ───────────────────────────────── */
-.bless{display:grid;gap:18px;text-align:center;place-items:center}
-.sneeze-stage{
-  position:relative;width:100%;min-height:150px;display:grid;place-items:center;
-  border-radius:var(--round);background:linear-gradient(140deg,var(--lav-soft),#fff);
-  border:2px solid rgba(193,174,247,.6);overflow:hidden;
-}
-.achoo{font-family:var(--display);font-size:clamp(34px,8vw,64px);color:var(--lav);margin:0}
-.achoo.pop{animation:achoo .6s cubic-bezier(.2,1.6,.4,1)}
-@keyframes achoo{0%{transform:scale(.4) rotate(-8deg);opacity:0}60%{transform:scale(1.18) rotate(4deg);opacity:1}100%{transform:scale(1)}}
-.shake{animation:shake .5s ease}
-@keyframes shake{
-  0%,100%{transform:translate(0,0)}
-  20%{transform:translate(-8px,4px) rotate(-1deg)}
-  40%{transform:translate(7px,-5px) rotate(1deg)}
-  60%{transform:translate(-5px,-3px)}
-  80%{transform:translate(4px,4px)}
-}
-.bless-replies{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:0;padding:0;list-style:none}
-.bless-replies li{
-  opacity:0;transform:translateY(10px);
-  background:#fff;border-radius:18px;padding:10px 16px;box-shadow:var(--shadow-sm);
-  font-size:14.5px;border:2px solid var(--mint);
-}
-.bless-replies li.on{animation:popin .45s cubic-bezier(.2,1.5,.4,1) forwards}
-@keyframes popin{to{opacity:1;transform:none}}
-.bless-count{font-family:var(--display);font-size:clamp(26px,5vw,38px);color:var(--mint);margin:0}
-.bless-count small{display:block;font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;color:var(--plum-3)}
+    /* ── 블레스유 프로토콜 ───────────────────────────────── */
+    .bless{display:grid;gap:18px;text-align:center;place-items:center}
+    .sneeze-stage{
+      position:relative;width:100%;min-height:150px;display:grid;place-items:center;
+      border-radius:var(--round);background:linear-gradient(140deg,var(--lav-soft),#fff);
+      border:2px solid rgba(193,174,247,.6);overflow:hidden;
+    }
+    .achoo{font-family:var(--display);font-size:clamp(34px,8vw,64px);color:var(--lav);margin:0}
+    .achoo.pop{animation:achoo .6s cubic-bezier(.2,1.6,.4,1)}
+    @keyframes achoo{0%{transform:scale(.4) rotate(-8deg);opacity:0}60%{transform:scale(1.18) rotate(4deg);opacity:1}100%{transform:scale(1)}}
+    .shake{animation:shake .5s ease}
+    @keyframes shake{
+      0%,100%{transform:translate(0,0)}
+      20%{transform:translate(-8px,4px) rotate(-1deg)}
+      40%{transform:translate(7px,-5px) rotate(1deg)}
+      60%{transform:translate(-5px,-3px)}
+      80%{transform:translate(4px,4px)}
+    }
+    .bless-replies{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:0;padding:0;list-style:none}
+    .bless-replies li{
+      opacity:0;transform:translateY(10px);
+      background:#fff;border-radius:18px;padding:10px 16px;box-shadow:var(--shadow-sm);
+      font-size:14.5px;border:2px solid var(--mint);
+    }
+    .bless-replies li.on{animation:popin .45s cubic-bezier(.2,1.5,.4,1) forwards}
+    @keyframes popin{to{opacity:1;transform:none}}
+    .bless-count{font-family:var(--display);font-size:clamp(26px,5vw,38px);color:var(--mint);margin:0}
+    .bless-count small{display:block;font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;color:var(--plum-3)}
 
-/* ── 상납 시스템 ─────────────────────────────────────── */
-.tribute{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;align-items:stretch}
-.chicken-btn{
-  border:0;cursor:pointer;background:linear-gradient(150deg,#fff,var(--butter));
-  border-radius:var(--round);padding:28px 20px;box-shadow:var(--shadow);
-  display:grid;gap:8px;place-items:center;transition:transform .16s cubic-bezier(.2,1.5,.4,1);
-  border:2px solid rgba(255,224,138,.9);
-}
-.chicken-btn:hover{transform:translateY(-4px) rotate(-1.5deg)}
-.chicken-btn:active{transform:scale(.94)}
-.chicken-btn .emoji{font-size:64px;line-height:1}
-.chicken-btn .label{font-family:var(--display);font-size:18px;color:var(--plum)}
-.tribute-meter{display:grid;gap:10px;align-content:center}
-.meter-n{font-family:var(--display);font-size:clamp(34px,7vw,58px);line-height:1;color:var(--pink-deep)}
-.meter-n small{font-family:var(--body);font-size:15px;color:var(--plum-2);margin-left:8px}
-.bar{height:16px;border-radius:999px;background:#fff;box-shadow:inset 0 0 0 2px var(--line);overflow:hidden}
-.bar i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,var(--butter),var(--peach),var(--pink));transition:width .5s cubic-bezier(.2,.9,.3,1)}
-.tier{font-family:var(--hand);font-size:24px;color:var(--plum)}
-.fly{position:fixed;z-index:70;pointer-events:none;font-size:28px;animation:fly 1.1s ease-out forwards}
-@keyframes fly{
-  0%{opacity:1;transform:translate(-50%,-50%) scale(.6)}
-  100%{opacity:0;transform:translate(-50%,-220%) scale(1.5) rotate(25deg)}
-}
+    /* ── 상납 시스템 ─────────────────────────────────────── */
+    .tribute{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;align-items:stretch}
+    .chicken-btn{
+      border:0;cursor:pointer;background:linear-gradient(150deg,#fff,var(--butter));
+      border-radius:var(--round);padding:28px 20px;box-shadow:var(--shadow);
+      display:grid;gap:8px;place-items:center;transition:transform .16s cubic-bezier(.2,1.5,.4,1);
+      border:2px solid rgba(255,224,138,.9);
+    }
+    .chicken-btn:hover{transform:translateY(-4px) rotate(-1.5deg)}
+    .chicken-btn:active{transform:scale(.94)}
+    .chicken-btn .emoji{font-size:64px;line-height:1}
+    .chicken-btn .label{font-family:var(--display);font-size:18px;color:var(--plum)}
+    .tribute-meter{display:grid;gap:10px;align-content:center}
+    .meter-n{font-family:var(--display);font-size:clamp(34px,7vw,58px);line-height:1;color:var(--pink-deep)}
+    .meter-n small{font-family:var(--body);font-size:15px;color:var(--plum-2);margin-left:8px}
+    .bar{height:16px;border-radius:999px;background:#fff;box-shadow:inset 0 0 0 2px var(--line);overflow:hidden}
+    .bar i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,var(--butter),var(--peach),var(--pink));transition:width .5s cubic-bezier(.2,.9,.3,1)}
+    .tier{font-family:var(--hand);font-size:24px;color:var(--plum)}
+    .fly{position:fixed;z-index:70;pointer-events:none;font-size:28px;animation:fly 1.1s ease-out forwards}
+    @keyframes fly{
+      0%{opacity:1;transform:translate(-50%,-50%) scale(.6)}
+      100%{opacity:0;transform:translate(-50%,-220%) scale(1.5) rotate(25deg)}
+    }
 
-/* ── 일지 타임라인 ───────────────────────────────────── */
-.diary{list-style:none;margin:0;padding:0;display:grid;gap:14px}
-.diary li{
-  display:flex;gap:16px;align-items:flex-start;
-  background:var(--card);backdrop-filter:blur(8px);
-  border-radius:22px;padding:18px 22px;border:1.5px solid #fff;box-shadow:var(--shadow-sm);
-  transition:transform .25s cubic-bezier(.2,1.3,.4,1),box-shadow .25s;
-}
-.diary li:hover{transform:translateX(8px) rotate(-.5deg);box-shadow:var(--shadow)}
-.diary .ic{font-size:28px;line-height:1.3;flex:none}
-.diary p{margin:0;font-size:16.5px}
-.diary .src{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--plum-3);margin-top:4px}
-.witness{
-  margin:18px 0 0;padding:16px 20px;border-radius:20px;border:2px dashed var(--mint);
-  background:rgba(255,255,255,.7);font-family:var(--hand);font-size:22px;color:var(--plum-2);
-}
+    /* ── 일지 타임라인 ───────────────────────────────────── */
+    .diary{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+    .diary li{
+      display:flex;gap:16px;align-items:flex-start;
+      background:var(--card);backdrop-filter:blur(8px);
+      border-radius:22px;padding:18px 22px;border:1.5px solid #fff;box-shadow:var(--shadow-sm);
+      transition:transform .25s cubic-bezier(.2,1.3,.4,1),box-shadow .25s;
+    }
+    .diary li:hover{transform:translateX(8px) rotate(-.5deg);box-shadow:var(--shadow)}
+    .diary .ic{font-size:28px;line-height:1.3;flex:none}
+    .diary p{margin:0;font-size:16.5px}
+    .diary .src{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--plum-3);margin-top:4px}
+    .witness{
+      margin:18px 0 0;padding:16px 20px;border-radius:20px;border:2px dashed var(--mint);
+      background:rgba(255,255,255,.7);font-family:var(--hand);font-size:22px;color:var(--plum-2);
+    }
 
-/* ── 대화 (브랜치 사건 / 상납) ───────────────────────── */
-.chat{list-style:none;margin:0;padding:0;display:grid;gap:12px}
-.chat li{max-width:min(560px,86%);display:grid;gap:4px}
-.chat li .who{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--plum-3);padding-inline:8px}
-.chat li .bub{
-  padding:13px 18px;border-radius:22px 22px 22px 6px;background:#fff;box-shadow:var(--shadow-sm);
-  font-size:15.5px;line-height:1.7;
-}
-.chat li[data-side="me"]{justify-self:end;text-align:right}
-.chat li[data-side="me"] .bub{
-  border-radius:22px 22px 6px 22px;
-  background:linear-gradient(130deg,var(--pink),var(--lav));color:#fff;
-}
-.chat li[data-side="me"] .who{text-align:right}
-.chat li[data-tone="warn"] .bub{background:linear-gradient(130deg,#fff,var(--butter));font-family:var(--mono);font-size:14px}
+    /* ── 대화 (브랜치 사건 / 상납) ───────────────────────── */
+    .chat{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+    .chat li{max-width:min(560px,86%);display:grid;gap:4px}
+    .chat li .who{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--plum-3);padding-inline:8px}
+    .chat li .bub{
+      padding:13px 18px;border-radius:22px 22px 22px 6px;background:#fff;box-shadow:var(--shadow-sm);
+      font-size:15.5px;line-height:1.7;
+    }
+    .chat li[data-side="me"]{justify-self:end;text-align:right}
+    .chat li[data-side="me"] .bub{
+      border-radius:22px 22px 6px 22px;
+      background:linear-gradient(130deg,var(--pink),var(--lav));color:#fff;
+    }
+    .chat li[data-side="me"] .who{text-align:right}
+    .chat li[data-tone="warn"] .bub{background:linear-gradient(130deg,#fff,var(--butter));font-family:var(--mono);font-size:14px}
 
-/* ── 능력치 ──────────────────────────────────────────── */
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
-.stat{background:var(--card);border-radius:22px;padding:18px 20px;border:1.5px solid #fff;box-shadow:var(--shadow-sm)}
-.stat dt{font-family:var(--display);font-size:16px;margin-bottom:2px}
-.stat dd{margin:0}
-.stat .val{font-family:var(--mono);font-size:12.5px;letter-spacing:.1em;color:var(--pink-deep);display:block;margin-bottom:8px}
-.stat .bar{height:12px}
-.stat .note{display:block;font-size:13px;color:var(--plum-3);margin-top:8px;line-height:1.6}
+    /* ── 능력치 ──────────────────────────────────────────── */
+    .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+    .stat{background:var(--card);border-radius:22px;padding:18px 20px;border:1.5px solid #fff;box-shadow:var(--shadow-sm)}
+    .stat dt{font-family:var(--display);font-size:16px;margin-bottom:2px}
+    .stat dd{margin:0}
+    .stat .val{font-family:var(--mono);font-size:12.5px;letter-spacing:.1em;color:var(--pink-deep);display:block;margin-bottom:8px}
+    .stat .bar{height:12px}
+    .stat .note{display:block;font-size:13px;color:var(--plum-3);margin-top:8px;line-height:1.6}
 
-/* ── 방명록 ──────────────────────────────────────────── */
-.guest-form{display:grid;gap:12px;grid-template-columns:minmax(0,150px) minmax(0,1fr) auto;margin-bottom:22px}
-@media (max-width:640px){.guest-form{grid-template-columns:1fr}}
-.guest-form input{
-  font-family:var(--body);font-size:15px;padding:13px 18px;border-radius:999px;
-  border:2px solid var(--pink-soft);background:#fff;color:var(--plum);min-width:0;
-}
-.guest-form input::placeholder{color:var(--plum-3)}
-.notes{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
-.notes li{
-  padding:20px;border-radius:6px 20px 20px 20px;box-shadow:var(--shadow-sm);
-  display:grid;gap:8px;position:relative;
-  animation:popin .4s cubic-bezier(.2,1.5,.4,1) both;
-  transition:transform .25s cubic-bezier(.2,1.4,.4,1);
-}
-.notes li:hover{transform:rotate(0deg) scale(1.03) !important;z-index:2}
-.notes li .msg{font-family:var(--hand);font-size:21px;line-height:1.5;color:#54415F}
-.notes li .name{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:rgba(84,65,95,.7)}
-.notes li .del{
-  position:absolute;top:8px;right:10px;border:0;background:transparent;cursor:pointer;
-  font-size:14px;color:rgba(84,65,95,.45);
-}
-.notes li .del:hover{color:var(--pink-deep)}
+    /* ── 방명록 ──────────────────────────────────────────── */
+    .guest-form{display:grid;gap:12px;grid-template-columns:minmax(0,150px) minmax(0,1fr) auto;margin-bottom:22px}
+    @media (max-width:640px){.guest-form{grid-template-columns:1fr}}
+    .guest-form input{
+      font-family:var(--body);font-size:15px;padding:13px 18px;border-radius:999px;
+      border:2px solid var(--pink-soft);background:#fff;color:var(--plum);min-width:0;
+    }
+    .guest-form input::placeholder{color:var(--plum-3)}
+    .notes{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+    .notes li{
+      padding:20px;border-radius:6px 20px 20px 20px;box-shadow:var(--shadow-sm);
+      display:grid;gap:8px;position:relative;
+      animation:popin .4s cubic-bezier(.2,1.5,.4,1) both;
+      transition:transform .25s cubic-bezier(.2,1.4,.4,1);
+    }
+    .notes li:hover{transform:rotate(0deg) scale(1.03) !important;z-index:2}
+    .notes li .msg{font-family:var(--hand);font-size:21px;line-height:1.5;color:#54415F}
+    .notes li .name{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:rgba(84,65,95,.7)}
+    .notes li .del{
+      position:absolute;top:8px;right:10px;border:0;background:transparent;cursor:pointer;
+      font-size:14px;color:rgba(84,65,95,.45);
+    }
+    .notes li .del:hover{color:var(--pink-deep)}
 
-/* ── 푸터 ────────────────────────────────────────────── */
-footer{padding-block:clamp(48px,8vw,90px) 60px;text-align:center}
-.foot-fish{font-size:40px;display:block;margin-bottom:10px;animation:swim 4s ease-in-out infinite}
-footer p{margin:6px 0;color:var(--plum-2)}
+    /* ── 푸터 ────────────────────────────────────────────── */
+    footer{padding-block:clamp(48px,8vw,90px) 60px;text-align:center}
+    .foot-fish{font-size:40px;display:block;margin-bottom:10px;animation:swim 4s ease-in-out infinite}
+    footer p{margin:6px 0;color:var(--plum-2)}
 
-/* 맨 위로 */
-.totop{
-  position:fixed;right:20px;bottom:20px;z-index:55;width:54px;height:54px;border-radius:50%;
-  border:0;cursor:pointer;background:linear-gradient(140deg,var(--pink),var(--lav));color:#fff;
-  font-size:22px;box-shadow:var(--shadow);opacity:0;transform:translateY(20px);pointer-events:none;
-  transition:opacity .3s,transform .3s;
-}
-.totop.on{opacity:1;transform:none;pointer-events:auto}
+    /* 맨 위로 */
+    .totop{
+      position:fixed;right:20px;bottom:20px;z-index:55;width:54px;height:54px;border-radius:50%;
+      border:0;cursor:pointer;background:linear-gradient(140deg,var(--pink),var(--lav));color:#fff;
+      font-size:22px;box-shadow:var(--shadow);opacity:0;transform:translateY(20px);pointer-events:none;
+      transition:opacity .3s,transform .3s;
+    }
+    .totop.on{opacity:1;transform:none;pointer-events:auto}
 
-/* 반짝이 & 이모지 비 */
-.sparkle{position:fixed;z-index:59;pointer-events:none;font-size:14px;animation:sparkle .9s ease-out forwards}
-@keyframes sparkle{
-  0%{opacity:1;transform:translate(-50%,-50%) scale(.3) rotate(0)}
-  100%{opacity:0;transform:translate(-50%,-140%) scale(1.2) rotate(120deg)}
-}
-.rain{position:fixed;top:-8vh;z-index:58;pointer-events:none;font-size:30px;animation:rain linear forwards}
-@keyframes rain{
-  0%{opacity:1;transform:translateY(0) rotate(0)}
-  100%{opacity:.9;transform:translateY(115vh) rotate(420deg)}
-}
-.toast{
-  position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(20px);
-  z-index:80;background:var(--plum);color:#fff;font-family:var(--display);font-size:15px;
-  padding:12px 24px;border-radius:999px;box-shadow:var(--shadow);opacity:0;
-  transition:opacity .3s,transform .3s;pointer-events:none;
-}
-.toast.on{opacity:1;transform:translateX(-50%)}
+    /* 반짝이 & 이모지 비 */
+    .sparkle{position:fixed;z-index:59;pointer-events:none;font-size:14px;animation:sparkle .9s ease-out forwards}
+    @keyframes sparkle{
+      0%{opacity:1;transform:translate(-50%,-50%) scale(.3) rotate(0)}
+      100%{opacity:0;transform:translate(-50%,-140%) scale(1.2) rotate(120deg)}
+    }
+    .rain{position:fixed;top:-8vh;z-index:58;pointer-events:none;font-size:30px;animation:rain linear forwards}
+    @keyframes rain{
+      0%{opacity:1;transform:translateY(0) rotate(0)}
+      100%{opacity:.9;transform:translateY(115vh) rotate(420deg)}
+    }
+    .toast{
+      position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(20px);
+      z-index:80;background:var(--plum);color:#fff;font-family:var(--display);font-size:15px;
+      padding:12px 24px;border-radius:999px;box-shadow:var(--shadow);opacity:0;
+      transition:opacity .3s,transform .3s;pointer-events:none;
+    }
+    .toast.on{opacity:1;transform:translateX(-50%)}
 
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
-  html{scroll-behavior:auto}
-  .reveal{opacity:1;transform:none}
-}
-</style>
+    @media (prefers-reduced-motion:reduce){
+      *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+      html{scroll-behavior:auto}
+      .reveal{opacity:1;transform:none}
+    }
+  </style>
 </head>
 <body>
 
@@ -576,485 +576,507 @@ footer p{margin:6px 0;color:var(--plum-2)}
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
-(function () {
-  "use strict";
+  (function () {
+    "use strict";
 
-  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var $  = function (id) { return document.getElementById(id); };
-  var pick = function (arr) { return arr[Math.floor(Math.random() * arr.length)]; };
+    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var $  = function (id) { return document.getElementById(id); };
+    var pick = function (arr) { return arr[Math.floor(Math.random() * arr.length)]; };
 
-  /* ── 저장소 (실패해도 페이지는 멀쩡하게) ─────────────── */
-  var store = {
-    get: function (k, d) {
-      try { var v = localStorage.getItem("heejoo:" + k); return v === null ? d : JSON.parse(v); }
-      catch (e) { return d; }
-    },
-    set: function (k, v) {
-      try { localStorage.setItem("heejoo:" + k, JSON.stringify(v)); } catch (e) {}
+    /* ── 저장소 (실패해도 페이지는 멀쩡하게) ─────────────── */
+    var store = {
+      get: function (k, d) {
+        try { var v = localStorage.getItem("heejoo:" + k); return v === null ? d : JSON.parse(v); }
+        catch (e) { return d; }
+      },
+      set: function (k, v) {
+        try { localStorage.setItem("heejoo:" + k, JSON.stringify(v)); } catch (e) {}
+      }
+    };
+
+    /* ── 토스트 ───────────────────────────────────────── */
+    var toastEl = $("toast"), toastTimer;
+    function toast(msg) {
+      toastEl.textContent = msg;
+      toastEl.classList.add("on");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(function () { toastEl.classList.remove("on"); }, 1900);
     }
-  };
 
-  /* ── 토스트 ───────────────────────────────────────── */
-  var toastEl = $("toast"), toastTimer;
-  function toast(msg) {
-    toastEl.textContent = msg;
-    toastEl.classList.add("on");
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(function () { toastEl.classList.remove("on"); }, 1900);
-  }
-
-  /* ── 이모지 연출 ──────────────────────────────────── */
-  function burst(x, y, emojis, n) {
-    if (reduce) return;
-    for (var i = 0; i < (n || 1); i++) {
-      var el = document.createElement("span");
-      el.className = "fly";
-      el.textContent = pick(emojis);
-      el.style.left = (x + (Math.random() * 60 - 30)) + "px";
-      el.style.top = (y + (Math.random() * 20 - 10)) + "px";
-      el.style.animationDelay = (i * 60) + "ms";
-      document.body.appendChild(el);
-      setTimeout(function (node) { return function () { node.remove(); }; }(el), 1400 + i * 60);
+    /* ── 이모지 연출 ──────────────────────────────────── */
+    function burst(x, y, emojis, n) {
+      if (reduce) return;
+      for (var i = 0; i < (n || 1); i++) {
+        var el = document.createElement("span");
+        el.className = "fly";
+        el.textContent = pick(emojis);
+        el.style.left = (x + (Math.random() * 60 - 30)) + "px";
+        el.style.top = (y + (Math.random() * 20 - 10)) + "px";
+        el.style.animationDelay = (i * 60) + "ms";
+        document.body.appendChild(el);
+        setTimeout(function (node) { return function () { node.remove(); }; }(el), 1400 + i * 60);
+      }
     }
-  }
-  function rain(emojis, n) {
-    if (reduce) return;
-    for (var i = 0; i < n; i++) {
-      var el = document.createElement("span");
-      el.className = "rain";
-      el.textContent = pick(emojis);
-      el.style.left = (Math.random() * 96) + "vw";
-      el.style.fontSize = (20 + Math.random() * 26) + "px";
-      el.style.animationDuration = (2.2 + Math.random() * 2) + "s";
-      el.style.animationDelay = (Math.random() * 0.7) + "s";
-      document.body.appendChild(el);
-      setTimeout(function (node) { return function () { node.remove(); }; }(el), 5200);
+    function rain(emojis, n) {
+      if (reduce) return;
+      for (var i = 0; i < n; i++) {
+        var el = document.createElement("span");
+        el.className = "rain";
+        el.textContent = pick(emojis);
+        el.style.left = (Math.random() * 96) + "vw";
+        el.style.fontSize = (20 + Math.random() * 26) + "px";
+        el.style.animationDuration = (2.2 + Math.random() * 2) + "s";
+        el.style.animationDelay = (Math.random() * 0.7) + "s";
+        document.body.appendChild(el);
+        setTimeout(function (node) { return function () { node.remove(); }; }(el), 5200);
+      }
     }
-  }
 
-  /* ── 스크롤 진행바 + 물고기 ───────────────────────── */
-  var fill = $("progressFill"), fish = $("progressFish"), toTop = $("toTop");
-  function onScroll() {
-    var h = document.documentElement.scrollHeight - window.innerHeight;
-    var p = h > 0 ? Math.min(1, window.scrollY / h) : 0;
-    fill.style.width = (p * 100) + "%";
-    fish.style.left = (p * 100) + "%";
-    toTop.classList.toggle("on", window.scrollY > 500);
-  }
-  window.addEventListener("scroll", onScroll, { passive: true });
-  window.addEventListener("resize", onScroll);
-  onScroll();
-  toTop.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" }); });
+    /* ── 스크롤 진행바 + 물고기 ───────────────────────── */
+    var fill = $("progressFill"), fish = $("progressFish"), toTop = $("toTop");
+    function onScroll() {
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      var p = h > 0 ? Math.min(1, window.scrollY / h) : 0;
+      fill.style.width = (p * 100) + "%";
+      fish.style.left = (p * 100) + "%";
+      toTop.classList.toggle("on", window.scrollY > 500);
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    onScroll();
+    toTop.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" }); });
 
-  /* ── 스크롤 등장 + 능력치 게이지 ──────────────────── */
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (en) {
-      if (!en.isIntersecting) return;
-      en.target.classList.add("on");
-      io.unobserve(en.target);
-      if (en.target.id === "stat") {
-        var bars = en.target.querySelectorAll("[data-fill]");
-        Array.prototype.forEach.call(bars, function (b, i) {
-          setTimeout(function () { b.style.width = b.getAttribute("data-fill") + "%"; }, 120 + i * 110);
-        });
+    /* ── 스크롤 등장 + 능력치 게이지 ──────────────────── */
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        en.target.classList.add("on");
+        io.unobserve(en.target);
+        if (en.target.id === "stat") {
+          var bars = en.target.querySelectorAll("[data-fill]");
+          Array.prototype.forEach.call(bars, function (b, i) {
+            setTimeout(function () { b.style.width = b.getAttribute("data-fill") + "%"; }, 120 + i * 110);
+          });
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -60px 0px" });
+    Array.prototype.forEach.call(document.querySelectorAll(".reveal"), function (el) { io.observe(el); });
+
+    /* ── 반짝이 커서 ──────────────────────────────────── */
+    if (!reduce && window.matchMedia("(hover: hover)").matches) {
+      var last = 0;
+      window.addEventListener("pointermove", function (e) {
+        var now = Date.now();
+        if (now - last < 90) return;
+        last = now;
+        var s = document.createElement("span");
+        s.className = "sparkle";
+        s.textContent = pick(["✨", "🫧", "💗", "⭐", "🐟"]);
+        s.style.left = e.clientX + "px";
+        s.style.top = e.clientY + "px";
+        document.body.appendChild(s);
+        setTimeout(function () { s.remove(); }, 900);
+      }, { passive: true });
+    }
+
+    /* ── 표지 타이핑 ──────────────────────────────────── */
+    var lines = [
+      "나 희준데~ 오늘 두 그릇 먹는다",
+      "길막하지 마라, 밟고 지나간다",
+      "한강이 길을 막길래 뛰어넘었다",
+      "재채기하면 블레스유는 필수다",
+      "브런치 뿌수려다 브랜치를 뿌쉈다",
+      "치킨은 매달, 감튀는 이제 기본"
+    ];
+    var typer = $("typer"), li = 0, ci = 0, del = false;
+    function type() {
+      var text = lines[li];
+      typer.textContent = del ? text.slice(0, ci--) : text.slice(0, ci++);
+      var wait = del ? 34 : 78;
+      if (!del && ci > text.length) { del = true; wait = 1500; }
+      else if (del && ci < 0) { del = false; ci = 0; li = (li + 1) % lines.length; wait = 320; }
+      setTimeout(type, wait);
+    }
+    if (reduce) { typer.textContent = lines[0]; } else { type(); }
+
+    /* ── 물고기 이스터에그 ────────────────────────────── */
+    var taps = 0, heroFish = $("heroFish"), fishHint = $("fishHint");
+    heroFish.addEventListener("click", function () {
+      taps++;
+      heroFish.style.transform = "scale(1.18) rotate(" + (Math.random() * 30 - 15) + "deg)";
+      setTimeout(function () { heroFish.style.transform = ""; }, 180);
+      if (taps >= 5) {
+        taps = 0;
+        rain(["🐟", "🐠", "🍚", "✨", "🐡", "🍗"], 34);
+        fishHint.textContent = "밥 묵자 묵어어어~ 🍚";
+        toast("🐟 어획량 폭증!");
+      } else {
+        fishHint.textContent = "앞으로 " + (5 - taps) + "번!";
       }
     });
-  }, { threshold: 0.12, rootMargin: "0px 0px -60px 0px" });
-  Array.prototype.forEach.call(document.querySelectorAll(".reveal"), function (el) { io.observe(el); });
 
-  /* ── 반짝이 커서 ──────────────────────────────────── */
-  if (!reduce && window.matchMedia("(hover: hover)").matches) {
-    var last = 0;
-    window.addEventListener("pointermove", function (e) {
-      var now = Date.now();
-      if (now - last < 90) return;
-      last = now;
-      var s = document.createElement("span");
-      s.className = "sparkle";
-      s.textContent = pick(["✨", "🫧", "💗", "⭐", "🐟"]);
-      s.style.left = e.clientX + "px";
-      s.style.top = e.clientY + "px";
-      document.body.appendChild(s);
-      setTimeout(function () { s.remove(); }, 900);
-    }, { passive: true });
-  }
+    /* ── 희주력 뽑기 ──────────────────────────────────── */
+    var FACTS = [
+      "정희주는 문을 열지 않는다. 문이 정희주에게 길을 비켜준다.",
+      "정희주는 늦은 적이 없다. 시간이 정희주를 기다린다.",
+      "정희주는 커피를 마시지 않는다. 커피가 정희주를 마신다.",
+      "정희주는 엘리베이터를 타지 않는다. 건물이 정희주를 따라 내려간다.",
+      "정희주는 길을 잃지 않는다. 지도가 정희주를 찾는다.",
+      "정희주는 질문에 답하지 않는다. 답이 정희주에게 질문한다.",
+      "정희주는 회의에 들어가지 않는다. 회의가 정희주 안으로 들어온다.",
+      "정희주는 비밀번호를 입력하지 않는다. 시스템이 정희주를 알아본다.",
+      "정희주는 야근을 하지 않는다. 하루가 정희주의 퇴근 시간에 맞춰 늘어난다.",
+      "정희주는 실수를 하지 않는다. 오류 메시지가 사과한다.",
+      "달은 지구를 돌지 않는다. 정희주가 달에게 궤도를 정해줬다.",
+      "뉴턴이 발견한 중력은 사실이 아니다. 정희주가 사과보고 나무에서 내려오라 했다.",
+      "다윈은 진화론을 발견하지 않았다. 정희주가 원숭이들에게 좀 서서 다니라고 했다.",
+      "에디슨은 전구를 발명하지 않았다. 정희주가 어둠에게 그만 나가라고 했다.",
+      "정희주는 PR을 올리지 않는다. 리뷰어들이 먼저 승인 버튼을 준비해 둔다.",
+      "정희주가 물에 빠졌다. 구조대가 물을 구조했다.",
+      "정희주가 태어났을 때 울지 않았다. 의사가 울었다.",
+      "정희주가 세상을 살아가는 것이 아니다. 세상이 정희주를 경험하고 있는 것이다.",
+      "정희주가 어릴 때 무서운 꿈을 꾸면 괴물이 부모님 방으로 도망갔다.",
+      "산타클로스는 정희주에게 선물을 받아 온세상 아이들에게 뿌린다.",
+      "정희주가 우연치 않게 불 타죽은 공룡을 맛본 뒤로 지구에서 공룡을 볼 수 없게됐다.",
+      "닐 암스트롱이 달에 발자국을 못 찍었다 하니, 정희주가 신발만 챙겨서 갔다 왔다.",
+      "그레이엄 벨이 마침내 전화기를 발명했을때 정희주로부터 부재중전화가 2통 와있었다.",
+      "라이트 형제가 비행기를 발명한 게 아니다. 정희주가 중력에게 잠깐 쉬라고 했다.",
+      "인류가 불을 발견한 것이 아니다. 정희주가 추워서 불에게 나오라고 했다.",
+      "공룡은 운석 때문에 멸종한 것이 아니다. 정희주가 조용히 좀 하라고 했다.",
+      "박지훈과 정희주가 대화를 하니 우주가 생겨났다. 그 뒤로 둘은 얘기하지 않는다."
+    ];
+    var factCard = $("factCard"), factText = $("factText"), factNo = $("factNo"), lastFact = -1;
 
-  /* ── 표지 타이핑 ──────────────────────────────────── */
-  var lines = [
-    "나 희준데~ 오늘 두 그릇 먹는다",
-    "길막하지 마라, 밟고 지나간다",
-    "한강이 길을 막길래 뛰어넘었다",
-    "재채기하면 블레스유는 필수다",
-    "브런치 뿌수려다 브랜치를 뿌쉈다",
-    "치킨은 매달, 감튀는 이제 기본"
-  ];
-  var typer = $("typer"), li = 0, ci = 0, del = false;
-  function type() {
-    var text = lines[li];
-    typer.textContent = del ? text.slice(0, ci--) : text.slice(0, ci++);
-    var wait = del ? 34 : 78;
-    if (!del && ci > text.length) { del = true; wait = 1500; }
-    else if (del && ci < 0) { del = false; ci = 0; li = (li + 1) % lines.length; wait = 320; }
-    setTimeout(type, wait);
-  }
-  if (reduce) { typer.textContent = lines[0]; } else { type(); }
-
-  /* ── 물고기 이스터에그 ────────────────────────────── */
-  var taps = 0, heroFish = $("heroFish"), fishHint = $("fishHint");
-  heroFish.addEventListener("click", function () {
-    taps++;
-    heroFish.style.transform = "scale(1.18) rotate(" + (Math.random() * 30 - 15) + "deg)";
-    setTimeout(function () { heroFish.style.transform = ""; }, 180);
-    if (taps >= 5) {
-      taps = 0;
-      rain(["🐟", "🐠", "🍚", "✨", "🐡", "🍗"], 34);
-      fishHint.textContent = "밥 묵자 묵어어어~ 🍚";
-      toast("🐟 어획량 폭증!");
-    } else {
-      fishHint.textContent = "앞으로 " + (5 - taps) + "번!";
+    function rollFact() {
+      var i;
+      do { i = Math.floor(Math.random() * FACTS.length); } while (FACTS.length > 1 && i === lastFact);
+      lastFact = i;
+      factCard.classList.remove("roll");
+      void factCard.offsetWidth;
+      factCard.classList.add("roll");
+      factNo.textContent = "FACT #" + String(i + 1).padStart(2, "0");
+      factText.textContent = FACTS[i];
+      var r = factCard.getBoundingClientRect();
+      burst(r.left + r.width / 2, r.top + 40, ["✨", "🌌", "💫", "🐟"], 5);
     }
-  });
+    $("factBtn").addEventListener("click", rollFact);
 
-  /* ── 희주력 뽑기 ──────────────────────────────────── */
-  var FACTS = [
-    "정희주는 문을 열지 않는다. 문이 정희주에게 길을 비켜준다.",
-    "정희주는 늦은 적이 없다. 시간이 정희주를 기다린다.",
-    "정희주는 커피를 마시지 않는다. 커피가 정희주를 마신다.",
-    "정희주는 엘리베이터를 타지 않는다. 건물이 정희주를 따라 내려간다.",
-    "정희주는 길을 잃지 않는다. 지도가 정희주를 찾는다.",
-    "정희주는 질문에 답하지 않는다. 답이 정희주에게 질문한다.",
-    "정희주는 회의에 들어가지 않는다. 회의가 정희주 안으로 들어온다.",
-    "정희주는 비밀번호를 입력하지 않는다. 시스템이 정희주를 알아본다.",
-    "정희주는 야근을 하지 않는다. 하루가 정희주의 퇴근 시간에 맞춰 늘어난다.",
-    "정희주는 실수를 하지 않는다. 오류 메시지가 사과한다.",
-    "달은 지구를 돌지 않는다. 정희주가 달에게 궤도를 정해줬다.",
-    "뉴턴이 발견한 중력은 사실이 아니다. 정희주가 사과보고 나무에서 내려오라 했다.",
-    "다윈은 진화론을 발견하지 않았다. 정희주가 원숭이들에게 좀 서서 다니라고 했다.",
-    "에디슨은 전구를 발명하지 않았다. 정희주가 어둠에게 그만 나가라고 했다.",
-    "정희주는 PR을 올리지 않는다. 리뷰어들이 먼저 승인 버튼을 준비해 둔다.",
-    "정희주가 물에 빠졌다. 구조대가 물을 구조했다.",
-    "정희주가 태어났을 때 울지 않았다. 의사가 울었다.",
-    "정희주가 세상을 살아가는 것이 아니다. 세상이 정희주를 경험하고 있는 것이다.",
-    "정희주가 어릴 때 무서운 꿈을 꾸면 괴물이 부모님 방으로 도망갔다.",
-    "산타클로스는 정희주에게 선물을 받아 온세상 아이들에게 뿌린다.",
-    "정희주가 우연치 않게 불 타죽은 공룡을 맛본 뒤로 지구에서 공룡을 볼 수 없게됐다.",
-    "닐 암스트롱이 달에 발자국을 못 찍었다 하니, 정희주가 신발만 챙겨서 갔다 왔다.",
-    "그레이엄 벨이 마침내 전화기를 발명했을때 정희주로부터 부재중전화가 2통 와있었다.",
-    "라이트 형제가 비행기를 발명한 게 아니다. 정희주가 중력에게 잠깐 쉬라고 했다.",
-    "인류가 불을 발견한 것이 아니다. 정희주가 추워서 불에게 나오라고 했다.",
-    "공룡은 운석 때문에 멸종한 것이 아니다. 정희주가 조용히 좀 하라고 했다.",
-    "박지훈과 정희주가 대화를 하니 우주가 생겨났다. 그 뒤로 둘은 얘기하지 않는다."
-  ];
-  var factCard = $("factCard"), factText = $("factText"), factNo = $("factNo"), lastFact = -1;
-
-  function rollFact() {
-    var i;
-    do { i = Math.floor(Math.random() * FACTS.length); } while (FACTS.length > 1 && i === lastFact);
-    lastFact = i;
-    factCard.classList.remove("roll");
-    void factCard.offsetWidth;
-    factCard.classList.add("roll");
-    factNo.textContent = "FACT #" + String(i + 1).padStart(2, "0");
-    factText.textContent = FACTS[i];
-    var r = factCard.getBoundingClientRect();
-    burst(r.left + r.width / 2, r.top + 40, ["✨", "🌌", "💫", "🐟"], 5);
-  }
-  $("factBtn").addEventListener("click", rollFact);
-
-  $("factCopy").addEventListener("click", function () {
-    var t = factText.textContent;
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(t).then(
-        function () { toast("📋 복사했어요!"); },
-        function () { toast("복사가 막혔어요 😢"); }
-      );
-    } else { toast("이 브라우저에선 복사가 안 돼요 😢"); }
-  });
-
-  var factList = $("factList"), listOpen = false;
-  function fillFactList() {
-    factList.innerHTML = "";
-    FACTS.forEach(function (f) {
-      var li = document.createElement("li");
-      li.textContent = f;
-      factList.appendChild(li);
+    $("factCopy").addEventListener("click", function () {
+      var t = factText.textContent;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(t).then(
+          function () { toast("📋 복사했어요!"); },
+          function () { toast("복사가 막혔어요 😢"); }
+        );
+      } else { toast("이 브라우저에선 복사가 안 돼요 😢"); }
     });
-  }
-  $("factAll").addEventListener("click", function () {
-    if (!factList.childElementCount) {
+
+    var factList = $("factList"), listOpen = false;
+    function fillFactList() {
+      factList.innerHTML = "";
       FACTS.forEach(function (f) {
         var li = document.createElement("li");
         li.textContent = f;
         factList.appendChild(li);
       });
     }
-    listOpen = !listOpen;
-    factList.hidden = !listOpen;
-    this.textContent = listOpen ? "🙈 접기" : "📜 스무 개 전부 보기";
-  });
-
-  /* ── 밥 묵자 룰렛 ─────────────────────────────────── */
-  var MENUS = [
-    { name: "김치찌개", say: "한식은 김치찌개에 제육볶음 먹어야지 무조건.", color: "#FFC2D1" },
-    { name: "제육볶음", say: "김치찌개 옆자리는 원래 제육이다.", color: "#FFDDAA" },
-    { name: "김치전골", say: "구내식당에서 고를 수 있는 건 사실 이거뿐이다.", color: "#C9F3E0" },
-    { name: "곱도리탕", say: "누가 추천했는지는 모르지만 일단 맛있다.", color: "#BFDEFF" },
-    { name: "삼겹김치찜", say: "이건 두 그릇 각이다. 아니, 기본 두 그릇이다.", color: "#E2D3FF" },
-    { name: "구내식당", say: "회사에서 먹고 갈 거라 했으니 정답일지도.", color: "#FFE9B0" },
-    { name: "타지마할", say: "노랗고 매콤하고 향기롭지는 않지만 타지마할.", color: "#FFD0BC" },
-    { name: "두 그릇 다", say: "고민할 시간에 두 그릇. 이게 희주의 방식.", color: "#FFB7D5" }
-  ];
-  var wheel = $("wheel"), seg = 360 / MENUS.length, stops = [], rotation = 0, spinning = false;
-  MENUS.forEach(function (m, i) {
-    stops.push(m.color + " " + (i * seg) + "deg " + ((i + 1) * seg) + "deg");
-    var label = document.createElement("div");
-    label.className = "wheel-label";
-    label.style.transform = "rotate(" + (i * seg + seg / 2) + "deg)";
-    label.innerHTML = "<span>" + m.name + "</span>";
-    wheel.appendChild(label);
-  });
-  wheel.style.background = "conic-gradient(" + stops.join(",") + ")";
-
-  var roulResult = $("roulResult"), roulSay = $("roulSay"), roulBtn = $("roulBtn");
-  roulBtn.addEventListener("click", function () {
-    if (spinning) return;
-    spinning = true;
-    roulBtn.disabled = true;
-    roulResult.textContent = "…";
-    roulSay.textContent = "가보자가보자…";
-
-    var idx = Math.floor(Math.random() * MENUS.length);
-    var landing = 360 - (idx * seg + seg / 2);          // 핀(12시)에 해당 칸 중앙이 오도록
-    var laps = 360 * (4 + Math.floor(Math.random() * 3)); // 매번 다른 바퀴 수
-    rotation = rotation - (rotation % 360) + landing + laps;
-    wheel.style.transform = "rotate(" + rotation + "deg)";
-
-    setTimeout(function () {
-      var m = MENUS[idx];
-      roulResult.textContent = m.name + " 🍚";
-      roulSay.textContent = m.say;
-      var r = wheel.getBoundingClientRect();
-      burst(r.left + r.width / 2, r.top + r.height / 2, ["🍚", "🍗", "🥢", "✨"], 7);
-      toast("오늘 점심은 " + m.name + "!");
-      roulBtn.disabled = false;
-      spinning = false;
-    }, reduce ? 60 : 4500);
-  });
-
-  /* ── 블레스유 프로토콜 ────────────────────────────── */
-  var ACHOO = ["에에에취!!", "엣취!", "에--취!!", "에취취취!", "흡… 에취!"];
-  var blessCount = store.get("bless", 0);
-  var blessEl = $("blessCount"), achoo = $("achoo"), stage = $("sneezeStage");
-  var replies = document.querySelectorAll("#blessReplies li");
-
-  function paintBless() {
-    blessEl.innerHTML = blessCount + "<small>누적 블레스유</small>";
-  }
-  paintBless();
-
-  $("sneezeBtn").addEventListener("click", function () {
-    achoo.textContent = pick(ACHOO);
-    achoo.classList.remove("pop");
-    void achoo.offsetWidth;
-    achoo.classList.add("pop");
-    stage.classList.remove("shake");
-    void stage.offsetWidth;
-    stage.classList.add("shake");
-
-    Array.prototype.forEach.call(replies, function (li) { li.classList.remove("on"); });
-    Array.prototype.forEach.call(replies, function (li, i) {
-      setTimeout(function () { li.classList.add("on"); }, 420 + i * 320);
-    });
-
-    setTimeout(function () {
-      blessCount++;
-      store.set("bless", blessCount);
-      paintBless();
-      var r = blessEl.getBoundingClientRect();
-      burst(r.left + r.width / 2, r.top, ["🙏", "💚", "✨"], 4);
-      if (blessCount % 10 === 0) toast("🙏 블레스유 " + blessCount + "회! 이제 안 서운하다");
-    }, 1400);
-  });
-
-  /* ── 상납 시스템 ──────────────────────────────────── */
-  var TIERS = [
-    { n: 0,  t: "아직 아무것도 안 바쳤다. 누나가 보고 있다." },
-    { n: 1,  t: "기본 상납 완료. 이 정도는 매달 하는 거다." },
-    { n: 5,  t: "감튀가 붙기 시작했다. 방향이 좋다. 🍟" },
-    { n: 12, t: "1년치 상납 달성. 동생 승진 검토 중." },
-    { n: 24, t: "2년치. 누나가 살짝 웃었다. 성공이다." },
-    { n: 50, t: "치킨 상납 명예의 전당 입성. 반말 1회 허용." },
-    { n: 100, t: "전설의 상납자. 이제 감튀는 대(大)자로 나온다. 🍟🍟" }
-  ];
-  var chicken = store.get("chicken", 0);
-  var chickenN = $("chickenN"), chickenBar = $("chickenBar"), chickenTier = $("chickenTier"), chickenSide = $("chickenSide");
-
-  function paintChicken() {
-    chickenN.textContent = chicken;
-    chickenBar.style.width = Math.min(100, (chicken / 100) * 100) + "%";
-    var tier = TIERS[0];
-    TIERS.forEach(function (x) { if (chicken >= x.n) tier = x; });
-    chickenTier.textContent = tier.t;
-    chickenSide.textContent = "감튀 🍟 × " + Math.floor(chicken / 5);
-  }
-  paintChicken();
-
-  $("chickenBtn").addEventListener("click", function (e) {
-    chicken++;
-    store.set("chicken", chicken);
-    paintChicken();
-    burst(e.clientX || window.innerWidth / 2, e.clientY || 200, ["🍗"], 1);
-    if (chicken % 5 === 0) {
-      burst(e.clientX || window.innerWidth / 2, e.clientY || 200, ["🍟"], 4);
-      toast("🍟 감튀 추가요~");
-    }
-    if (chicken === 12) rain(["🍗", "🍟", "✨"], 20);
-  });
-
-  $("chickenReset").addEventListener("click", function () {
-    if (!chicken) { toast("이미 깨끗합니다"); return; }
-    chicken = 0;
-    store.set("chicken", 0);
-    paintChicken();
-    toast("상납 기록을 지웠습니다… 괜찮겠어요?");
-  });
-
-  /* ── 방명록 ───────────────────────────────────────── */
-  /* README의 「다녀간 사람들」 표를 불러오지 못했을 때 쓰는 폴백 */
-  var SEED = [
-    { name: "지훈", msg: "소녀, 훌륭한. 그러나 아직 멀었음.", seed: true },
-    { name: "지윤", msg: "레포가 핫해서 놀러왔어요 히쮸홧팅홧딩", seed: true },
-    { name: "강현", msg: "재밌는 내용 많네요 잘 보고 갑니다~", seed: true },
-    { name: "혜연", msg: "이런 잼컨에 나를 빼놓을 수 없지", seed: true },
-    { name: "희주", msg: "내가 죽거든 이 글들을 묘비에 새겨주세요", seed: true }
-  ];
-  var NOTE_COLORS = ["#FFE0EC", "#E7DEFF", "#D8F5E9", "#FFF0C9", "#DCEBFF", "#FFE2D5"];
-  var notesEl = $("notes");
-
-  function renderNotes() {
-    var mine = store.get("guest", []);
-    var all = SEED.concat(mine);
-    notesEl.innerHTML = "";
-    all.forEach(function (g, i) {
-      var li = document.createElement("li");
-      li.style.background = NOTE_COLORS[i % NOTE_COLORS.length];
-      li.style.transform = "rotate(" + ((i % 4) - 1.5) + "deg)";
-      li.style.animationDelay = (i * 45) + "ms";
-
-      var msg = document.createElement("p");
-      msg.className = "msg";
-      msg.textContent = "“" + g.msg + "”";
-
-      var name = document.createElement("span");
-      name.className = "name";
-      name.textContent = "— " + g.name;
-
-      li.appendChild(msg);
-      li.appendChild(name);
-
-      if (!g.seed) {
-        var del = document.createElement("button");
-        del.className = "del";
-        del.type = "button";
-        del.textContent = "✕";
-        del.setAttribute("aria-label", g.name + " 메모 지우기");
-        del.addEventListener("click", function () {
-          var list = store.get("guest", []);
-          list.splice(i - SEED.length, 1);
-          store.set("guest", list);
-          renderNotes();
-          toast("메모를 뗐어요");
+    $("factAll").addEventListener("click", function () {
+      if (!factList.childElementCount) {
+        FACTS.forEach(function (f) {
+          var li = document.createElement("li");
+          li.textContent = f;
+          factList.appendChild(li);
         });
-        li.appendChild(del);
       }
-      notesEl.appendChild(li);
+      listOpen = !listOpen;
+      factList.hidden = !listOpen;
+      this.textContent = listOpen ? "🙈 접기" : "📜 스무 개 전부 보기";
     });
-  }
-  renderNotes();
 
-  $("guestForm").addEventListener("submit", function (e) {
-    e.preventDefault();
-    var name = $("guestName").value.trim();
-    var msg = $("guestMsg").value.trim();
-    if (!name || !msg) { toast("이름과 한마디를 모두 적어주세요"); return; }
-    var list = store.get("guest", []);
-    list.push({ name: name, msg: msg });
-    store.set("guest", list);
-    $("guestMsg").value = "";
-    renderNotes();
-    rain(["💗", "✨", "🐟", "🌸"], 12);
-    toast("🙌 " + name + "님, 다녀가셨습니다!");
-  });
+    /* ── 밥 묵자 룰렛 ─────────────────────────────────── */
+    var MENUS = [
+      { name: "김치찌개", say: "한식은 김치찌개에 제육볶음 먹어야지 무조건.", color: "#FFC2D1" },
+      { name: "제육볶음", say: "김치찌개 옆자리는 원래 제육이다.", color: "#FFDDAA" },
+      { name: "김치전골", say: "구내식당에서 고를 수 있는 건 사실 이거뿐이다.", color: "#C9F3E0" },
+      { name: "곱도리탕", say: "누가 추천했는지는 모르지만 일단 맛있다.", color: "#BFDEFF" },
+      { name: "삼겹김치찜", say: "이건 두 그릇 각이다. 아니, 기본 두 그릇이다.", color: "#E2D3FF" },
+      { name: "구내식당", say: "회사에서 먹고 갈 거라 했으니 정답일지도.", color: "#FFE9B0" },
+      { name: "타지마할", say: "노랗고 매콤하고 향기롭지는 않지만 타지마할.", color: "#FFD0BC" },
+      { name: "두 그릇 다", say: "고민할 시간에 두 그릇. 이게 희주의 방식.", color: "#FFB7D5" }
+    ];
+    var wheel = $("wheel"), seg = 360 / MENUS.length, stops = [], rotation = 0, spinning = false;
+    MENUS.forEach(function (m, i) {
+      stops.push(m.color + " " + (i * seg) + "deg " + ((i + 1) * seg) + "deg");
+      var label = document.createElement("div");
+      label.className = "wheel-label";
+      label.style.transform = "rotate(" + (i * seg + seg / 2) + "deg)";
+      label.innerHTML = "<span>" + m.name + "</span>";
+      wheel.appendChild(label);
+    });
+    wheel.style.background = "conic-gradient(" + stops.join(",") + ")";
 
-  /* ── README.md 동기화 ─────────────────────────────────
-     같은 폴더의 README.md를 읽어 「정희주에 관한 사실」과
-     「다녀간 사람들」 표를 그대로 반영한다. 표에 한 줄 추가하면
-     페이지가 따라온다. 못 읽으면(file:// 등) 위의 폴백을 쓴다. */
-  function sectionOf(md, heading) {
-    var lines = md.split(/\r?\n/), out = [], on = false;
-    for (var i = 0; i < lines.length; i++) {
-      var line = lines[i];
-      if (/^#{1,6}\s/.test(line)) {
-        if (on) break;
-        on = line.indexOf(heading) !== -1;
-        continue;
-      }
-      if (on) out.push(line);
+    var roulResult = $("roulResult"), roulSay = $("roulSay"), roulBtn = $("roulBtn");
+    roulBtn.addEventListener("click", function () {
+      if (spinning) return;
+      spinning = true;
+      roulBtn.disabled = true;
+      roulResult.textContent = "…";
+      roulSay.textContent = "가보자가보자…";
+
+      var idx = Math.floor(Math.random() * MENUS.length);
+      var landing = 360 - (idx * seg + seg / 2);          // 핀(12시)에 해당 칸 중앙이 오도록
+      var laps = 360 * (4 + Math.floor(Math.random() * 3)); // 매번 다른 바퀴 수
+      rotation = rotation - (rotation % 360) + landing + laps;
+      wheel.style.transform = "rotate(" + rotation + "deg)";
+
+      setTimeout(function () {
+        var m = MENUS[idx];
+        roulResult.textContent = m.name + " 🍚";
+        roulSay.textContent = m.say;
+        var r = wheel.getBoundingClientRect();
+        burst(r.left + r.width / 2, r.top + r.height / 2, ["🍚", "🍗", "🥢", "✨"], 7);
+        toast("오늘 점심은 " + m.name + "!");
+        roulBtn.disabled = false;
+        spinning = false;
+      }, reduce ? 60 : 4500);
+    });
+
+    /* ── 블레스유 프로토콜 ────────────────────────────── */
+    var ACHOO = ["에에에취!!", "엣취!", "에--취!!", "에취취취!", "흡… 에취!"];
+    var blessCount = store.get("bless", 0);
+    var blessEl = $("blessCount"), achoo = $("achoo"), stage = $("sneezeStage");
+    var replies = document.querySelectorAll("#blessReplies li");
+
+    function paintBless() {
+      blessEl.innerHTML = blessCount + "<small>누적 블레스유</small>";
     }
-    return out;
-  }
+    paintBless();
 
-  function parseFacts(md) {
-    return sectionOf(md, "정희주에 관한 사실")
-      .map(function (l) {
-        var m = l.match(/^\s*\d+\.\s+(.*\S)\s*$/);
-        return m ? m[1].replace(/\*\*/g, "") : null;
-      })
-      .filter(Boolean);
-  }
+    $("sneezeBtn").addEventListener("click", function () {
+      achoo.textContent = pick(ACHOO);
+      achoo.classList.remove("pop");
+      void achoo.offsetWidth;
+      achoo.classList.add("pop");
+      stage.classList.remove("shake");
+      void stage.offsetWidth;
+      stage.classList.add("shake");
 
-  function parseGuests(md) {
-    return sectionOf(md, "다녀간 사람들")
-      .filter(function (l) { return /^\s*\|/.test(l); })
-      .map(function (l) {
-        return l.trim().replace(/^\||\|$/g, "").split("|").map(function (c) { return c.trim(); });
-      })
-      .filter(function (c) {
-        return c.length >= 2 && c[0] && c[1] &&
-               !/^-{2,}$/.test(c[0].replace(/[\s:]/g, "")) &&
-               !(c[0] === "이름" && c[1] === "한마디");
-      })
-      .map(function (c) {
-        return { name: c[0].replace(/\*\*/g, ""), msg: c[1].replace(/\*\*/g, ""), seed: true };
+      Array.prototype.forEach.call(replies, function (li) { li.classList.remove("on"); });
+      Array.prototype.forEach.call(replies, function (li, i) {
+        setTimeout(function () { li.classList.add("on"); }, 420 + i * 320);
       });
-  }
 
-  fetch("README.md", { cache: "no-cache" })
-    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
-    .then(function (md) {
+      setTimeout(function () {
+        blessCount++;
+        store.set("bless", blessCount);
+        paintBless();
+        var r = blessEl.getBoundingClientRect();
+        burst(r.left + r.width / 2, r.top, ["🙏", "💚", "✨"], 4);
+        if (blessCount % 10 === 0) toast("🙏 블레스유 " + blessCount + "회! 이제 안 서운하다");
+      }, 1400);
+    });
+
+    /* ── 상납 시스템 ──────────────────────────────────── */
+    var TIERS = [
+      { n: 0,  t: "아직 아무것도 안 바쳤다. 누나가 보고 있다." },
+      { n: 1,  t: "기본 상납 완료. 이 정도는 매달 하는 거다." },
+      { n: 5,  t: "감튀가 붙기 시작했다. 방향이 좋다. 🍟" },
+      { n: 12, t: "1년치 상납 달성. 동생 승진 검토 중." },
+      { n: 24, t: "2년치. 누나가 살짝 웃었다. 성공이다." },
+      { n: 50, t: "치킨 상납 명예의 전당 입성. 반말 1회 허용." },
+      { n: 100, t: "전설의 상납자. 이제 감튀는 대(大)자로 나온다. 🍟🍟" }
+    ];
+    var chicken = store.get("chicken", 0);
+    var chickenN = $("chickenN"), chickenBar = $("chickenBar"), chickenTier = $("chickenTier"), chickenSide = $("chickenSide");
+
+    function paintChicken() {
+      chickenN.textContent = chicken;
+      chickenBar.style.width = Math.min(100, (chicken / 100) * 100) + "%";
+      var tier = TIERS[0];
+      TIERS.forEach(function (x) { if (chicken >= x.n) tier = x; });
+      chickenTier.textContent = tier.t;
+      chickenSide.textContent = "감튀 🍟 × " + Math.floor(chicken / 5);
+    }
+    paintChicken();
+
+    $("chickenBtn").addEventListener("click", function (e) {
+      chicken++;
+      store.set("chicken", chicken);
+      paintChicken();
+      burst(e.clientX || window.innerWidth / 2, e.clientY || 200, ["🍗"], 1);
+      if (chicken % 5 === 0) {
+        burst(e.clientX || window.innerWidth / 2, e.clientY || 200, ["🍟"], 4);
+        toast("🍟 감튀 추가요~");
+      }
+      if (chicken === 12) rain(["🍗", "🍟", "✨"], 20);
+    });
+
+    $("chickenReset").addEventListener("click", function () {
+      if (!chicken) { toast("이미 깨끗합니다"); return; }
+      chicken = 0;
+      store.set("chicken", 0);
+      paintChicken();
+      toast("상납 기록을 지웠습니다… 괜찮겠어요?");
+    });
+
+    /* ── 방명록 ───────────────────────────────────────── */
+    /* README의 「다녀간 사람들」 표를 불러오지 못했을 때 쓰는 폴백 */
+    var SEED = [
+      { name: "지훈", msg: "소녀, 훌륭한. 그러나 아직 멀었음.", seed: true },
+      { name: "지윤", msg: "레포가 핫해서 놀러왔어요 히쮸홧팅홧딩", seed: true },
+      { name: "강현", msg: "재밌는 내용 많네요 잘 보고 갑니다~", seed: true },
+      { name: "혜연", msg: "이런 잼컨에 나를 빼놓을 수 없지", seed: true },
+      { name: "희주", msg: "내가 죽거든 이 글들을 묘비에 새겨주세요", seed: true }
+    ];
+    var NOTE_COLORS = ["#FFE0EC", "#E7DEFF", "#D8F5E9", "#FFF0C9", "#DCEBFF", "#FFE2D5"];
+    var notesEl = $("notes");
+
+    function renderNotes() {
+      var mine = store.get("guest", []);
+      var all = SEED.concat(mine);
+      notesEl.innerHTML = "";
+      all.forEach(function (g, i) {
+        var li = document.createElement("li");
+        li.style.background = NOTE_COLORS[i % NOTE_COLORS.length];
+        li.style.transform = "rotate(" + ((i % 4) - 1.5) + "deg)";
+        li.style.animationDelay = (i * 45) + "ms";
+
+        var msg = document.createElement("p");
+        msg.className = "msg";
+        msg.textContent = "“" + g.msg + "”";
+
+        var name = document.createElement("span");
+        name.className = "name";
+        name.textContent = "— " + g.name;
+
+        li.appendChild(msg);
+        li.appendChild(name);
+
+        if (!g.seed) {
+          var del = document.createElement("button");
+          del.className = "del";
+          del.type = "button";
+          del.textContent = "✕";
+          del.setAttribute("aria-label", g.name + " 메모 지우기");
+          del.addEventListener("click", function () {
+            var list = store.get("guest", []);
+            list.splice(i - SEED.length, 1);
+            store.set("guest", list);
+            renderNotes();
+            toast("메모를 뗐어요");
+          });
+          li.appendChild(del);
+        }
+        notesEl.appendChild(li);
+      });
+    }
+    renderNotes();
+
+    $("guestForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      var name = $("guestName").value.trim();
+      var msg = $("guestMsg").value.trim();
+      if (!name || !msg) { toast("이름과 한마디를 모두 적어주세요"); return; }
+      var list = store.get("guest", []);
+      list.push({ name: name, msg: msg });
+      store.set("guest", list);
+      $("guestMsg").value = "";
+      renderNotes();
+      rain(["💗", "✨", "🐟", "🌸"], 12);
+      toast("🙌 " + name + "님, 다녀가셨습니다!");
+    });
+
+    /* ── README.md 동기화 ─────────────────────────────────
+       같은 폴더의 README.md를 읽어 「정희주에 관한 사실」과
+       「다녀간 사람들」 표를 그대로 반영한다. 표에 한 줄 추가하면
+       페이지가 따라온다. 못 읽으면(file:// 등) 위의 폴백을 쓴다. */
+    function sectionOf(md, heading) {
+      var lines = md.split(/\r?\n/), out = [], on = false;
+      for (var i = 0; i < lines.length; i++) {
+        var line = lines[i];
+        if (/^#{1,6}\s/.test(line)) {
+          if (on) break;
+          on = line.indexOf(heading) !== -1;
+          continue;
+        }
+        if (on) out.push(line);
+      }
+      return out;
+    }
+
+    function parseFacts(md) {
+      return sectionOf(md, "정희주에 관한 사실")
+        .map(function (l) {
+          var m = l.match(/^\s*\d+\.\s+(.*\S)\s*$/);
+          return m ? m[1].replace(/\*\*/g, "") : null;
+        })
+        .filter(Boolean);
+    }
+
+    function parseGuests(md) {
+      return sectionOf(md, "다녀간 사람들")
+        .filter(function (l) { return /^\s*\|/.test(l); })
+        .map(function (l) {
+          return l.trim().replace(/^\||\|$/g, "").split("|").map(function (c) { return c.trim(); });
+        })
+        .filter(function (c) {
+          return c.length >= 2 && c[0] && c[1] &&
+                 !/^-{2,}$/.test(c[0].replace(/[\s:]/g, "")) &&
+                 !(c[0] === "이름" && c[1] === "한마디");
+        })
+        .map(function (c) {
+          return { name: c[0].replace(/\*\*/g, ""), msg: c[1].replace(/\*\*/g, ""), seed: true };
+        });
+    }
+
+    /* 같은 폴더 → GitHub raw 순으로 시도한다.
+       GitHub Pages는 Jekyll이 README.md를 가져가 버려서 404가 나는 경우가 있고
+       (.nojekyll 파일로 막아두지만), 파일을 직접 열면 fetch 자체가 막힌다.
+       raw.githubusercontent.com은 CORS가 열려 있어 어느 쪽에서도 읽힌다. */
+    var README_SOURCES = [
+      { url: "README.md", label: "" },
+      { url: "https://raw.githubusercontent.com/SDS-Junior-Reviewer-2026-Second/ptest_Heejoo/main/README.md", label: " (GitHub raw)" }
+    ];
+
+    function applyReadme(md, label) {
       var facts = parseFacts(md);
+      var guests = parseGuests(md);
+      /* 표도 목록도 못 찾았으면 README가 아니다(404 페이지 등) → 다음 소스로 */
+      if (!guests.length && !facts.length) throw new Error("README 형식이 아님");
+
       if (facts.length) {
         FACTS.length = 0;
         Array.prototype.push.apply(FACTS, facts);
         if (factList.childElementCount) fillFactList();
       }
-      var guests = parseGuests(md);
       if (guests.length) {
         SEED.length = 0;
         Array.prototype.push.apply(SEED, guests);
         renderNotes();
       }
       var src = $("guestSrc");
-      if (src) src.textContent = "README의 「다녀간 사람들」 " + guests.length + "명을 그대로 불러왔습니다 · 사실 " + FACTS.length + "개";
-    })
-    .catch(function () {
-      var src = $("guestSrc");
-      if (src) src.textContent = "README를 읽지 못해 저장된 목록을 보여주는 중입니다 (파일을 직접 열면 생기는 현상)";
-    });
+      if (src) {
+        src.textContent = "README의 「다녀간 사람들」 " + guests.length + "명을 그대로 불러왔습니다 · 사실 "
+          + FACTS.length + "개" + label;
+      }
+    }
 
-  /* 첫 화면에 사실 하나 미리 깔아두기 */
-  rollFact();
-})();
+    function loadReadme(i) {
+      if (i >= README_SOURCES.length) {
+        var src = $("guestSrc");
+        if (src) src.textContent = "README를 읽지 못해 저장된 목록을 보여주는 중입니다";
+        return;
+      }
+      fetch(README_SOURCES[i].url, { cache: "no-cache" })
+        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
+        .then(function (md) { applyReadme(md, README_SOURCES[i].label); })
+        .catch(function () { loadReadme(i + 1); });
+    }
+    loadReadme(0);
+
+    /* 첫 화면에 사실 하나 미리 깔아두기 */
+    rollFact();
+  })();
 </script>
 </body>
 </html>
