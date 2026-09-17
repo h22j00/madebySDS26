@@ -6,7 +6,7 @@
 누가 시킨 것도 아닌데 다들 자발적으로 일지를 남겼다.
 
 <p align="center">
-  <a href="https://sds-junior-reviewer-2026-second.github.io/ptest_Heejoo/"><b>🐟 정희주 도감 — 페이지로 보기 (밥 묵자 룰렛, 블레스유 프로토콜 포함)</b></a>
+  <a href="https://h22j00.github.io/madebySDS26/"><b>🐟 정희주 도감 — 페이지로 보기 (밥 묵자 룰렛, 블레스유 프로토콜 포함)</b></a>
 </p>
 
 ---
